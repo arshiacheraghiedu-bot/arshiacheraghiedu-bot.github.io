@@ -1,35 +1,60 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <meta name="description" content="Academic homepage of Arshia Cheraghi, M.A. student in English Studies at LMU Munich.">
+
 <title>Arshia Cheraghi | Homepage</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
 <style>
+
 :root {
   --lmu-green: #2f854c;
   --dark: #32383e;
-  --text: #25292e;
-  --muted: #526171;
+  --dark-secondary: #252b31;
+  --dark-footer: #1c2126;
+  --text: #ffffff;
+  --muted: #c4cbd3;
   --link: #1685ff;
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto", Arial, sans-serif;
   color: var(--text);
-  background: #fff;
+  background: var(--dark);
 }
+
+/* =========================
+   HERO / PROFILE SECTION
+========================= */
+
 .hero {
   min-height: 540px;
   text-align: center;
-  background: #fff;
-  padding: 0 20px 70px;
+  background: #ffffff;
+  color: #25292e;
+  padding: 35px 20px 70px;
   overflow: hidden;
 }
+
 .portrait-stage {
   width: 310px;
   height: 310px;
@@ -39,193 +64,358 @@ body {
   align-items: center;
   justify-content: center;
 }
-.lmu-word {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  font-size: clamp(100px, 16vw, 160px);
-  line-height: 1;
-  font-weight: 700;
-  letter-spacing: -10px;
-  color: var(--lmu-green);
-  opacity: .22;
-  z-index: 0;
-  white-space: nowrap;
-}
+
+/* حذف لوگوی پشت عکس */
+
+.lmu-word,
 .lmu-mark {
-  position: absolute;
-  width: 235px;
-  height: 123px;
-  object-fit: contain;
-  opacity: .13;
-  z-index: 0;
+  display: none;
 }
+
+/* تصویر پروفایل */
+
 .profile-photo {
   position: relative;
   z-index: 1;
+
   width: 250px;
   height: 250px;
+
   border-radius: 50%;
   object-fit: cover;
   object-position: center 35%;
+
   display: block;
   background: #e8eef0;
+
+  border: 4px solid #ffffff;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
+
 .hero h1 {
   font-size: clamp(34px, 4vw, 44px);
   line-height: 1.2;
   font-weight: 500;
   margin-bottom: 10px;
 }
+
 .hero .welcome {
   font-size: 22px;
   font-weight: 300;
-  color: var(--muted);
+  color: #526171;
 }
+
 .hero-actions {
   margin-top: 22px;
+
   display: flex;
   justify-content: center;
   gap: 12px;
   flex-wrap: wrap;
 }
+
 .action {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   padding: 10px 18px;
+
   border-radius: 6px;
   font-size: 14px;
   text-decoration: none;
+
   border: 1px solid #d8dee5;
   color: #344252;
   background: white;
-  transition: .2s ease;
+
+  transition: 0.2s ease;
 }
+
 .action:hover {
   border-color: var(--lmu-green);
   color: var(--lmu-green);
   transform: translateY(-2px);
 }
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
 .about {
   background: var(--dark);
-  color: #fff;
-  padding: 160px 24px 100px;
+  color: #ffffff;
+
+  padding: 100px 24px;
   min-height: 390px;
 }
+
 .content-wrap {
   max-width: 800px;
   margin: 0 auto;
 }
-.about h2, .education h2 {
+
+.about h2,
+.education h2 {
   font-size: 30px;
   font-weight: 500;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
+
 .about p {
   font-size: 16px;
-  line-height: 1.7;
+  line-height: 1.8;
   font-weight: 400;
   color: #f2f4f6;
 }
+
 .about a {
   color: var(--link);
   text-decoration: none;
 }
-.about a:hover { text-decoration: underline; }
+
+.about a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   EDUCATION SECTION
+========================= */
+
 .education {
-  background: #fff;
+  background: var(--dark-secondary);
+  color: #ffffff;
+
   padding: 85px 24px 100px;
 }
-.education h2 { margin-bottom: 28px; }
+
+.education h2 {
+  color: #ffffff;
+  margin-bottom: 28px;
+}
+
 .edu-item {
   padding: 22px 0;
-  border-bottom: 1px solid #e6e9ed;
+  border-bottom: 1px solid #414850;
 }
-.edu-item:first-of-type { border-top: 1px solid #e6e9ed; }
+
+.edu-item:first-of-type {
+  border-top: 1px solid #414850;
+}
+
 .edu-item h3 {
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 5px;
+  color: #ffffff;
 }
+
 .edu-item .degree {
-  color: var(--lmu-green);
+  color: #72c58b;
   font-size: 15px;
   font-weight: 500;
   margin-bottom: 4px;
 }
+
 .edu-item p {
-  color: var(--muted);
+  color: #c4cbd3;
   font-size: 15px;
   line-height: 1.6;
 }
+
+/* =========================
+   FOOTER
+========================= */
+
 footer {
-  background: #f6f7f8;
+  background: var(--dark-footer);
   text-align: center;
+
   padding: 22px;
-  color: #7a8490;
+
+  color: #aab3bd;
   font-size: 12px;
 }
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
 @media (max-width: 600px) {
-  .hero { min-height: 510px; padding-bottom: 55px; }
-  .portrait-stage { width: 270px; height: 270px; margin-bottom: 20px; }
-  .profile-photo { width: 220px; height: 220px; }
-  .lmu-mark { width: 205px; height: 108px; }
-  .about { padding-top: 95px; }
-  .about h2, .education h2 { font-size: 27px; }
+
+  .hero {
+    min-height: 510px;
+    padding: 25px 20px 55px;
+  }
+
+  .portrait-stage {
+    width: 270px;
+    height: 270px;
+    margin-bottom: 20px;
+  }
+
+  .profile-photo {
+    width: 220px;
+    height: 220px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero .welcome {
+    font-size: 19px;
+  }
+
+  .about {
+    padding: 75px 24px;
+  }
+
+  .education {
+    padding: 65px 24px 75px;
+  }
+
+  .about h2,
+  .education h2 {
+    font-size: 27px;
+  }
+
+  .edu-item h3 {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
 }
+
 </style>
 </head>
+
 <body>
 
+<!-- =========================
+     PROFILE / HOME
+========================= -->
+
 <header class="hero">
-  <div class="portrait-stage" aria-label="Profile portrait with LMU branding">
-    <span class="lmu-word" aria-hidden="true">LMU</span>
-    <img class="lmu-mark" src="lmu-logo.svg" alt="" aria-hidden="true">
-    <img class="profile-photo" src="profile.jpg" alt="Arshia Cheraghi">
+
+  <div class="portrait-stage" aria-label="Profile portrait">
+
+    <img
+      class="profile-photo"
+      src="profile.jpg"
+      alt="Arshia Cheraghi"
+    >
+
   </div>
 
   <h1>Arshia Cheraghi</h1>
-  <p class="welcome">Welcome to my homepage!</p>
+
+  <p class="welcome">
+    Welcome to my homepage!
+  </p>
 
   <div class="hero-actions">
-    <a class="action" href="mailto:Arshia.Cheraghi@campus.lmu.de">Email me</a>
-    <a class="action" href="https://www.linkedin.com/in/arshiach196/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+
+    <a
+      class="action"
+      href="mailto:Arshia.Cheraghi@campus.lmu.de"
+    >
+      Email me
+    </a>
+
+    <a
+      class="action"
+      href="https://www.linkedin.com/in/arshiach196/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      LinkedIn
+    </a>
+
   </div>
+
 </header>
 
+<!-- =========================
+     ABOUT ME
+========================= -->
+
 <section class="about" id="about">
+
   <div class="content-wrap">
+
     <h2>About me</h2>
+
     <p>
       I am a master's student in English Studies at
-      <a href="https://www.lmu.de/en/" target="_blank" rel="noopener noreferrer">Ludwig Maximilian University of Munich (LMU)</a>.
+      <a
+        href="https://www.lmu.de/en/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Ludwig Maximilian University of Munich (LMU)
+      </a>.
+
       I have a background in Teaching English as a Foreign Language (TEFL)
-      and experience in English language teaching and international education.
-      My academic interests include language acquisition, linguistics,
-      and language education.
+      and experience in English language teaching and international
+      education. My academic interests include language acquisition,
+      linguistics, and language education.
     </p>
+
   </div>
+
 </section>
 
+<!-- =========================
+     EDUCATION
+========================= -->
+
 <section class="education" id="education">
+
   <div class="content-wrap">
+
     <h2>Education</h2>
 
     <div class="edu-item">
-      <h3>Ludwig Maximilian University of Munich (LMU)</h3>
-      <p class="degree">M.A. English Studies</p>
-      <p>Munich, Germany</p>
+
+      <h3>
+        Ludwig Maximilian University of Munich (LMU)
+      </h3>
+
+      <p class="degree">
+        M.A. English Studies
+      </p>
+
+      <p>
+        Munich, Germany
+      </p>
+
     </div>
 
     <div class="edu-item">
-      <h3>Islamic Azad University, North Tehran Branch</h3>
-      <p class="degree">B.A. Teaching English as a Foreign Language (TEFL)</p>
-      <p>Tehran, Iran</p>
+
+      <h3>
+        Islamic Azad University, North Tehran Branch
+      </h3>
+
+      <p class="degree">
+        B.A. Teaching English as a Foreign Language (TEFL)
+      </p>
+
+      <p>
+        Tehran, Iran
+      </p>
+
     </div>
+
   </div>
+
 </section>
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
   © 2026 Arshia Cheraghi
