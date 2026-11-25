@@ -4,432 +4,116 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arshia Cheraghi | Academic Homepage</title>
+<title>Arshia Cheraghi</title>
 
-<meta name="description" content="Academic homepage of Arshia Cheraghi, English Studies student, English language teacher and researcher.">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
-
-:root {
-  --navy: #101c2e;
-  --navy-light: #1b2d45;
-  --blue: #7db7ff;
-  --text: #222b38;
-  --muted: #657184;
-  --light: #f5f7fa;
-  --white: #ffffff;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  font-family: 'Inter', sans-serif;
-  color: var(--text);
-  background: var(--white);
-  line-height: 1.7;
+  font-family: 'Roboto', sans-serif;
+  color: #25292d;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.container {
-  width: min(1100px, 90%);
-  margin: auto;
-}
-
-/* NAVIGATION */
-
-nav {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  padding: 25px 0;
-  z-index: 10;
-}
-
-.nav-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-weight: 800;
-  font-size: 21px;
-  letter-spacing: -1px;
-  color: white;
-}
-
-.logo span {
-  color: var(--blue);
-}
-
-.nav-links {
-  display: flex;
-  gap: 28px;
-  color: #d9e2ef;
-  font-size: 13px;
-}
-
-.nav-links a:hover {
-  color: var(--blue);
-}
-
-/* HERO */
+/* TOP SECTION */
 
 .hero {
-  min-height: 690px;
-  background:
-    radial-gradient(circle at 80% 20%, #263e5d 0%, transparent 35%),
-    linear-gradient(135deg, #101c2e, #17283e 70%, #0c1726);
-  color: white;
-  display: flex;
-  align-items: center;
+  height: 540px;
+  background: white;
   text-align: center;
-  position: relative;
-  overflow: hidden;
-  padding: 110px 0 80px;
+  padding-top: 0;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  border: 1px solid rgba(125,183,255,.12);
+.profile {
+  width: 270px;
+  height: 270px;
   border-radius: 50%;
-  top: -220px;
-  left: -180px;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  border: 1px solid rgba(125,183,255,.12);
-  border-radius: 50%;
-  bottom: -230px;
-  right: -120px;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-}
-
-.avatar {
-  width: 165px;
-  height: 165px;
-  border-radius: 50%;
-  margin: 0 auto 28px;
-  border: 5px solid rgba(255,255,255,.12);
-  background: linear-gradient(135deg, #7db7ff, #425b85);
+  background: #e8eef5;
+  color: #34465e;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 52px;
-  font-weight: 800;
-  letter-spacing: -3px;
-  box-shadow: 0 20px 60px rgba(0,0,0,.3);
+  font-size: 65px;
+  font-weight: 300;
+  margin: 0 auto 20px;
+  overflow: hidden;
 }
-
-/* Replace the initials with your photo later */
 
 .hero h1 {
-  font-size: clamp(38px, 6vw, 68px);
-  font-weight: 800;
-  letter-spacing: -3px;
-  line-height: 1.15;
-  margin-bottom: 15px;
-}
-
-.hero h1 span {
-  color: var(--blue);
-}
-
-.hero-subtitle {
-  color: #c4d1e2;
-  font-size: 18px;
+  font-size: 44px;
+  font-weight: 500;
   margin-bottom: 10px;
 }
 
-.hero-description {
-  color: #8fa3bc;
-  font-size: 14px;
-  max-width: 560px;
-  margin: 0 auto 30px;
+.hero p {
+  font-size: 22px;
+  font-weight: 300;
+  color: #526171;
 }
 
-.buttons {
-  display: flex;
-  justify-content: center;
-  gap: 13px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  padding: 12px 23px;
-  border-radius: 7px;
-  font-size: 13px;
-  font-weight: 600;
-  transition: .25s;
-}
-
-.btn-primary {
-  background: var(--blue);
-  color: #102039;
-}
-
-.btn-primary:hover {
-  background: white;
-  transform: translateY(-3px);
-}
-
-.btn-outline {
-  border: 1px solid #52657e;
-  color: white;
-}
-
-.btn-outline:hover {
-  border-color: var(--blue);
-  color: var(--blue);
-}
-
-/* ABOUT */
+/* ABOUT SECTION */
 
 .about {
-  background: var(--navy);
+  background: #32383e;
   color: white;
-  padding: 100px 0;
+  min-height: 430px;
+  padding: 160px 25px 90px;
 }
 
-.section-label {
-  color: var(--blue);
-  text-transform: uppercase;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  margin-bottom: 14px;
-}
-
-.section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(30px, 4vw, 43px);
-  line-height: 1.25;
-  margin-bottom: 25px;
-}
-
-.about-text {
-  max-width: 760px;
-  color: #c0ccdc;
-  font-size: 15px;
-}
-
-.about-text strong {
-  color: white;
-}
-
-/* CONTENT SECTIONS */
-
-section.content {
-  padding: 95px 0;
-}
-
-.content:nth-of-type(even) {
-  background: var(--light);
-}
-
-.section-heading {
-  margin-bottom: 45px;
-}
-
-.section-heading .section-title {
-  color: var(--navy);
-  margin-bottom: 0;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-
-.card {
-  background: white;
-  padding: 30px;
-  border: 1px solid #e8edf3;
-  border-radius: 12px;
-  transition: .25s;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(20,40,70,.08);
-}
-
-.card-icon {
-  width: 45px;
-  height: 45px;
-  background: #edf5ff;
-  color: #397bc2;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 21px;
-  margin-bottom: 22px;
-}
-
-.card h3 {
-  color: var(--navy);
-  font-size: 17px;
-  margin-bottom: 10px;
-}
-
-.card p {
-  color: var(--muted);
-  font-size: 13px;
-}
-
-.tag {
-  display: inline-block;
-  margin-top: 17px;
-  padding: 5px 10px;
-  background: #edf5ff;
-  color: #397bc2;
-  border-radius: 5px;
-  font-size: 10px;
-  font-weight: 700;
-}
-
-/* EXPERIENCE */
-
-.timeline {
+.about-content {
   max-width: 800px;
+  margin: 0 auto;
 }
 
-.timeline-item {
-  border-left: 2px solid #dbe6f2;
-  padding: 0 0 35px 28px;
-  position: relative;
-}
-
-.timeline-item::before {
-  content: "";
-  width: 10px;
-  height: 10px;
-  background: #6da8ed;
-  border-radius: 50%;
-  position: absolute;
-  left: -6px;
-  top: 8px;
-}
-
-.timeline-item h3 {
-  font-size: 17px;
-  color: var(--navy);
-}
-
-.timeline-item .date {
-  font-size: 12px;
-  color: #6c8db5;
+.about h2 {
+  font-size: 30px;
+  font-weight: 500;
   margin-bottom: 8px;
 }
 
-.timeline-item p {
-  color: var(--muted);
-  font-size: 13px;
+.about p {
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 400;
 }
 
-/* CONTACT */
-
-.contact {
-  background: var(--navy);
-  color: white;
-  text-align: center;
-  padding: 90px 0;
+.about a {
+  color: #1685ff;
+  text-decoration: none;
 }
 
-.contact .section-title {
-  margin-bottom: 15px;
-}
-
-.contact p {
-  color: #b9c7d9;
-  font-size: 14px;
-  margin-bottom: 28px;
-}
-
-.contact-links {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
-  font-size: 13px;
-}
-
-.contact-links a {
-  color: var(--blue);
-}
-
-footer {
-  background: #0b1421;
-  color: #7f91a8;
-  text-align: center;
-  padding: 22px;
-  font-size: 11px;
+.about a:hover {
+  text-decoration: underline;
 }
 
 /* MOBILE */
 
-@media (max-width: 750px) {
-  .nav-links {
-    gap: 13px;
-    font-size: 11px;
-  }
-
-  .logo {
-    font-size: 17px;
-  }
-
+@media (max-width: 600px) {
   .hero {
-    min-height: 650px;
+    height: 500px;
+  }
+
+  .profile {
+    width: 220px;
+    height: 220px;
+    font-size: 55px;
   }
 
   .hero h1 {
-    letter-spacing: -2px;
+    font-size: 34px;
   }
 
-  .cards {
-    grid-template-columns: 1fr;
+  .hero p {
+    font-size: 19px;
   }
 
-  section.content,
   .about {
-    padding: 70px 0;
-  }
-
-  .card {
-    padding: 25px;
-  }
-}
-
-@media (max-width: 430px) {
-  .nav-links a:nth-child(2) {
-    display: none;
+    padding-top: 100px;
   }
 }
 </style>
@@ -437,229 +121,39 @@ footer {
 
 <body>
 
-<nav>
-  <div class="container nav-content">
-    <a href="#" class="logo">Arshia<span>.</span></a>
-
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </div>
-</nav>
-
 <header class="hero">
-  <div class="container hero-content">
 
-    <div class="avatar">AC</div>
-
-    <h1>Arshia <span>Cheraghi</span></h1>
-
-    <p class="hero-subtitle">
-      English Studies · Language Education
-    </p>
-
-    <p class="hero-description">
-      Welcome to my academic homepage.
-      Exploring language, learning, and the future of education.
-    </p>
-
-    <div class="buttons">
-      <a href="#about" class="btn btn-primary">Discover More</a>
-      <a href="#contact" class="btn btn-outline">Get in Touch</a>
-    </div>
-
+  <div class="profile">
+    AC
   </div>
+
+  <h1>Arshia Cheraghi</h1>
+
+  <p>Welcome to my homepage!</p>
+
 </header>
 
-<section class="about" id="about">
-  <div class="container">
+<section class="about">
 
-    <p class="section-label">A little about me</p>
+  <div class="about-content">
 
-    <h2 class="section-title">
-      About me
-    </h2>
-
-    <p class="about-text">
-      I am a master's student in <strong>English Studies</strong>
-      at <strong>Ludwig Maximilian University of Munich</strong>.
-      With a background in Teaching English as a Foreign Language,
-      I am passionate about language learning, linguistics,
-      and innovative approaches to education.
-
-      <br><br>
-
-      My academic interests include language acquisition,
-      psycholinguistics, and the role of artificial intelligence
-      in language education. Alongside my studies, I have experience
-      teaching English and working with international learners.
-    </p>
-
-  </div>
-</section>
-
-<section class="content" id="education">
-  <div class="container">
-
-    <div class="section-heading">
-      <p class="section-label">Academic background</p>
-      <h2 class="section-title">Education</h2>
-    </div>
-
-    <div class="cards">
-
-      <div class="card">
-        <div class="card-icon">🎓</div>
-        <h3>M.A. English Studies</h3>
-        <p>
-          Ludwig Maximilian University of Munich
-          <br>
-          Germany
-        </p>
-        <span class="tag">Master's Degree</span>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">📚</div>
-        <h3>B.A. TEFL</h3>
-        <p>
-          Islamic Azad University
-          <br>
-          North Tehran Branch
-        </p>
-        <span class="tag">English Education</span>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">🌍</div>
-        <h3>Language Education</h3>
-        <p>
-          English language teaching,
-          learner development, and
-          international education.
-        </p>
-        <span class="tag">Academic Interest</span>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="content" id="research">
-  <div class="container">
-
-    <div class="section-heading">
-      <p class="section-label">Academic interests</p>
-      <h2 class="section-title">Research</h2>
-    </div>
-
-    <div class="cards">
-
-      <div class="card">
-        <div class="card-icon">🧠</div>
-        <h3>Language Acquisition</h3>
-        <p>
-          Understanding how learners acquire
-          vocabulary, grammar, and language skills.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">💬</div>
-        <h3>Psycholinguistics</h3>
-        <p>
-          Exploring the relationship between
-          language, cognition, and learning.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">🤖</div>
-        <h3>AI in Language Education</h3>
-        <p>
-          Investigating how artificial intelligence
-          can support language learning and teaching.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="content" id="experience">
-  <div class="container">
-
-    <div class="section-heading">
-      <p class="section-label">Professional journey</p>
-      <h2 class="section-title">Experience</h2>
-    </div>
-
-    <div class="timeline">
-
-      <div class="timeline-item">
-        <h3>English Language Teacher</h3>
-        <p class="date">Teaching Experience</p>
-        <p>
-          Teaching English to learners of different
-          ages and proficiency levels in international
-          and local educational settings.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <h3>Coordinator & Interview Mentor</h3>
-        <p class="date">Episoden · Seoul, South Korea</p>
-        <p>
-          Supporting interviewer training,
-          conducting learner interviews,
-          and contributing to English
-          language learning programs.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <h3>Research Experience</h3>
-        <p class="date">English Language Education</p>
-        <p>
-          Academic research interests in
-          language learning, vocabulary development,
-          and educational technology.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="contact" id="contact">
-  <div class="container">
-
-    <p class="section-label">Let's connect</p>
-
-    <h2 class="section-title">
-      Get in touch
-    </h2>
+    <h2>About me</h2>
 
     <p>
-      Feel free to contact me for academic
-      collaboration or professional opportunities.
+      I am a master's student in English Studies at
+      <a href="https://www.lmu.de/en/" target="_blank">
+        Ludwig Maximilian University of Munich
+      </a>.
+      I have a background in Teaching English as a Foreign Language
+      and experience in English language teaching and international
+      education.
+      My academic interests include language acquisition,
+      linguistics, and language education.
     </p>
 
-    <div class="contact-links">
-      <a href="mailto:YOUR_EMAIL@example.com">Email</a>
-      <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
-      <a href="https://github.com/" target="_blank">GitHub</a>
-    </div>
-
   </div>
-</section>
 
-<footer>
-  © 2026 Arshia Cheraghi · Academic Homepage
-</footer>
+</section>
 
 </body>
 </html>
